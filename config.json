@@ -1,0 +1,28 @@
+{
+    "channel_type": "gewechat",
+    "debug": true,
+    "dify_api_base": "https://api.dify.ai/v1",
+    "dify_api_key": "app-qqN6YsiZGdTaSuirhazxFrp7",
+    "dify_app_type": "chatbot",
+    "gewechat_app_id": "wx_YKsfLB0BVl0AJL5oz7Zt7",
+    "gewechat_base_url": "http://10.2.1.98:2531/v2/api",
+    "gewechat_callback_url": "http://10.2.1.98:9919/v2/api/callback/collect",
+    "gewechat_download_url": "http://10.2.1.98:2532/download",
+    "gewechat_token": "d2a2d0342b1f46e8ab414200b7374517",
+    "group_chat_prefix": [
+        "@bot"
+    ],
+    "group_name_white_list": [
+        "ALL_GROUP"
+    ],
+    "image_recognition": true,
+    "model": "dify",
+    "single_chat_prefix": [
+        ""
+    ],
+    "single_chat_reply_prefix": "",
+    "speech_recognition": true,
+    "text_to_voice": "dify",
+    "voice_reply_voice": true,
+    "voice_to_text": "dify"
+}
