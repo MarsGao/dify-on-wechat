@@ -32,8 +32,12 @@ docker tag ghcr.io/tu1h/wechotd/wechotd:alpine gewe
 ## 2.2 使用docker启动
 
 ```bash
+# 创建数据目录并启动服务 Linux
 mkdir -p gewechat/data  
 docker run -itd -v ./gewechat/data:/root/temp -p 2531:2531 -p 2532:2532 --restart=always --name=gewe gewe
+# 创建数据目录并启动服务 Windows
+mkdir C:\DockerShare\gewechat
+docker run -itd -v C:\DockerShare\gewechat:/root/temp -p 2531:2531 -p 2532:2532 --restart=always --name=gewe gewe
 ```
 
 ## 2.3 使用docker compose启动

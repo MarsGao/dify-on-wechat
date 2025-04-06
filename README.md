@@ -98,9 +98,12 @@ dify-on-wechat、dify、gewechat服务的调用关系
 docker pull registry.cn-chengdu.aliyuncs.com/tu1h/wechotd:alpine
 docker tag registry.cn-chengdu.aliyuncs.com/tu1h/wechotd:alpine gewe
 
-# 创建数据目录并启动服务
+# 创建数据目录并启动服务 Linux
 mkdir -p gewechat/data  
 docker run -itd -v ./gewechat/data:/root/temp -p 2531:2531 -p 2532:2532 --restart=always --name=gewe gewe
+# 创建数据目录并启动服务 Windows
+mkdir C:\DockerShare\gewechat
+docker run -itd -v C:\\DockerShare\\gewechat:/root/temp -p 2531:2531 -p 2532:2532 --restart=always --name=gewe gewe
 ```
 
 #### 配置dify-on-wechat
@@ -395,13 +398,13 @@ cd dify-on-wechat/
 **(2) 安装核心依赖 (必选)：**
 > 能够使用`itchat`创建机器人，并具有文字交流功能所需的最小依赖集合。
 ```bash
-pip3 install -r requirements.txt  # 国内可以在该命令末尾添加 "-i https://mirrors.aliyun.com/pypi/simple" 参数，使用阿里云镜像源安装依赖
+pip3 install -r requirements.txt -i https://mirrors.aliyun.com/pypi/simple # 国内可以在该命令末尾添加 "-i https://mirrors.aliyun.com/pypi/simple" 参数，使用阿里云镜像源安装依赖
 ```
 
 **(3) 拓展依赖 (可选，建议安装)：**
 
 ```bash
-pip3 install -r requirements-optional.txt # 国内可以在该命令末尾添加 "-i https://mirrors.aliyun.com/pypi/simple" 参数，使用阿里云镜像源安装依赖
+pip3 install -r requirements-optional.txt -i https://mirrors.aliyun.com/pypi/simple # 国内可以在该命令末尾添加 "-i https://mirrors.aliyun.com/pypi/simple" 参数，使用阿里云镜像源安装依赖
 ```
 > 如果某项依赖安装失败可注释掉对应的行再继续
 
